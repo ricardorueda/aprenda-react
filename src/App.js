@@ -108,7 +108,7 @@ const SectionGrid2 = props => {
     <div>
       <Titulo conteudo="Section Grid 2"></Titulo>
       <section class="grid2">
-        <Video video="https://www.w3schools.com/html/mov_bbb" legenda="Como criar sites" classe="video"></Video>
+        <Video video="/" legenda="Como criar sites" classe="video"></Video>
         <div class="sidebar">
           <Imagem img={lobo2} legenda="Legenda 1" esconderCurtidas="true"></Imagem>
           <Imagem img={lobo3} legenda="Legenda 2" esconderCurtidas="true"> </Imagem>
