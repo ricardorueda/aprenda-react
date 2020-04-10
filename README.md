@@ -69,4 +69,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 Curso: https://www.aprendareact.com.br/cursos/iniciando-em-react
+
 CSS Grid: https://www.youtube.com/watch?v=x-4z_u8LcGc
