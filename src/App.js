@@ -31,10 +31,16 @@ const Titulo = props => {
 }
 
 const Imagem = props => {
+  const [curtidas, setCurtidas] = React.useState(0);
+
   return (
     <div class={props.classe}>
       <img src={props.img} alt=""></img>
-      <p>{props.legenda}</p>
+      <div class="legenda">
+        <p>{props.legenda}</p>
+        {!props.esconderCurtidas
+          && <span onClick={() => setCurtidas(curtidas + 1)}  >{curtidas} curtidas </span>}
+      </div>
     </div>
   )
 }
@@ -42,8 +48,21 @@ const Imagem = props => {
 const Video = props => {
   return (
     <div class={props.classe}>
-      <img src={props.img} alt=""></img>
+      <video width="100%" controls>
+        <source src={`${props.video}.mp4`} type="video/mp4"></source>
+        <source src={`${props.video}.ogg`} type="video/ogg"></source>
+        O seu navegador não suporta vídeo HTML5.
+      </video>
       <h2>{props.legenda}</h2>
+    </div>
+  )
+}
+
+const Noticia = props => {
+  return (
+    <div class={props.classe}>
+      <img src={props.img} alt=""></img>
+      <p>{props.titulo}</p>
     </div>
   )
 }
@@ -89,12 +108,12 @@ const SectionGrid2 = props => {
     <div>
       <Titulo conteudo="Section Grid 2"></Titulo>
       <section class="grid2">
-        <Video img={lobo1} legenda="Como criar sites" classe="video"></Video>
+        <Video video="https://www.w3schools.com/html/mov_bbb" legenda="Como criar sites" classe="video"></Video>
         <div class="sidebar">
-          <Imagem img={lobo2} legenda="Legenda 1"></Imagem>
-          <Imagem img={lobo3} legenda="Legenda 2"></Imagem>
-          <Imagem img={lobo1} legenda="Legenda 3"></Imagem>
-          <Imagem img={lobo3} legenda="Legenda 4"></Imagem>
+          <Imagem img={lobo2} legenda="Legenda 1" esconderCurtidas="true"></Imagem>
+          <Imagem img={lobo3} legenda="Legenda 2" esconderCurtidas="true"> </Imagem>
+          <Imagem img={lobo1} legenda="Legenda 3" esconderCurtidas="true"></Imagem>
+          <Imagem img={lobo3} legenda="Legenda 4" esconderCurtidas="true"></Imagem>
         </div>
       </section>
     </div>
@@ -106,9 +125,9 @@ const SectionGrid3 = props => {
     <div>
       <Titulo conteudo="Section Grid 3"></Titulo>
       <section class="grid3">
-        <Imagem img={lobo4} legenda="Legenda 1" classe="grid3-item"></Imagem>
-        <Imagem img={lobo1} legenda="Legenda 2" classe="grid3-item"></Imagem>
-        <Imagem img={lobo2} legenda="Legenda 3" classe="grid3-item"></Imagem>
+        <Noticia img={lobo4} titulo="Legenda 1" classe="grid3-item"></Noticia>
+        <Noticia img={lobo1} titulo="Legenda 2" classe="grid3-item"></Noticia>
+        <Noticia img={lobo2} titulo="Legenda 3" classe="grid3-item"></Noticia>
       </section>
     </div>
   );

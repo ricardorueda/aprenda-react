@@ -69,6 +69,17 @@ img {
     padding: 10px;
 }
 
+.legenda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legenda span {
+    font-size: 2vh;
+    cursor: pointer;
+} 
+
 /* flexbox */
 
 .flex {
