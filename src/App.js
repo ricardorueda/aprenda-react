@@ -24,35 +24,41 @@ const Header = props => {
   );
 }
 
+const Titulo = props => {
+  return (
+    <h1>{props.conteudo}</h1>
+  )
+}
+
+const Imagem = props => {
+  return (
+    <div class={props.classe}>
+      <img src={props.img} alt=""></img>
+      <p>{props.legenda}</p>
+    </div>
+  )
+}
+
+const Video = props => {
+  return (
+    <div class={props.classe}>
+      <img src={props.img} alt=""></img>
+      <h2>{props.legenda}</h2>
+    </div>
+  )
+}
+
 const SectionFlex = props => {
   return (
     <div>
-      <h1>Section Flexbox</h1>
+      <Titulo conteudo="Section Flexbox"></Titulo>
       <section class="flex">
-        <div>
-          <img src={lobo1} alt=""></img>
-          <p>foto 1</p>
-        </div>
-        <div>
-          <img src={lobo2} alt=""></img>
-          <p>foto 2</p>
-        </div>
-        <div>
-          <img src={lobo3} alt=""></img>
-          <p>foto 3</p>
-        </div>
-        <div>
-          <img src={lobo2} alt=""></img>
-          <p>foto 4</p>
-        </div>
-        <div>
-          <img src={lobo3} alt=""></img>
-          <p>foto 5</p>
-        </div>
-        <div>
-          <img src={lobo1} alt=""></img>
-          <p>foto 6</p>
-        </div>
+        <Imagem img={lobo1} legenda="foto 1"></Imagem>
+        <Imagem img={lobo3} legenda="foto 2"></Imagem>
+        <Imagem img={lobo2} legenda="foto 3"></Imagem>
+        <Imagem img={lobo3} legenda="foto 4"></Imagem>
+        <Imagem img={lobo1} legenda="foto 5"></Imagem>
+        <Imagem img={lobo2} legenda="foto 6"></Imagem>
       </section>
     </div>
   );
@@ -61,48 +67,18 @@ const SectionFlex = props => {
 const SectionGrid1 = props => {
   return (
     <div>
-      <h1>Section Grid 1</h1>
+      <Titulo conteudo="Section Grid 1"></Titulo>
       <section class="grid1">
-        <div>
-          <img src={lobo1} alt=""></img>
-          <p>foto 1</p>
-        </div>
-        <div>
-          <img src={lobo2} alt=""></img>
-          <p>foto 2</p>
-        </div>
-        <div>
-          <img src={lobo3} alt=""></img>
-          <p>foto 3</p>
-        </div>
-        <div>
-          <img src={lobo2} alt=""></img>
-          <p>foto 4</p>
-        </div>
-        <div>
-          <img src={lobo3} alt=""></img>
-          <p>foto 5</p>
-        </div>
-        <div>
-          <img src={lobo1} alt=""></img>
-          <p>foto 6</p>
-        </div>
-        <div>
-          <img src={lobo3} alt=""></img>
-          <p>foto 3</p>
-        </div>
-        <div>
-          <img src={lobo2} alt=""></img>
-          <p>foto 4</p>
-        </div>
-        <div>
-          <img src={lobo3} alt=""></img>
-          <p>foto 5</p>
-        </div>
-        <div class="anuncio">
-          <img src={lobo1} alt=""></img>
-          <p>Anúncio</p>
-        </div>
+        <Imagem img={lobo2} legenda="foto 1"></Imagem>
+        <Imagem img={lobo3} legenda="foto 2"></Imagem>
+        <Imagem img={lobo1} legenda="foto 3"></Imagem>
+        <Imagem img={lobo2} legenda="foto 4"></Imagem>
+        <Imagem img={lobo1} legenda="foto 5"></Imagem>
+        <Imagem img={lobo2} legenda="foto 6"></Imagem>
+        <Imagem img={lobo1} legenda="foto 7"></Imagem>
+        <Imagem img={lobo3} legenda="foto 8"></Imagem>
+        <Imagem img={lobo2} legenda="foto 9"></Imagem>
+        <Imagem img={lobo1} legenda="Anúncio" classe="anuncio"></Imagem>
       </section>
     </div>
   );
@@ -111,29 +87,14 @@ const SectionGrid1 = props => {
 const SectionGrid2 = props => {
   return (
     <div>
-      <h1>Section Grid 2</h1>
+      <Titulo conteudo="Section Grid 2"></Titulo>
       <section class="grid2">
-        <div class="video">
-          <img src={lobo1} alt=""></img>
-          <h2>Como criar sites</h2>
-        </div>
+        <Video img={lobo1} legenda="Como criar sites" classe="video"></Video>
         <div class="sidebar">
-          <div>
-            <img src={lobo2} alt=""></img>
-            <p>Legenda</p>
-          </div>
-          <div>
-            <img src={lobo3} alt=""></img>
-            <p>Legenda</p>
-          </div>
-          <div>
-            <img src={lobo1} alt=""></img>
-            <p>Legenda</p>
-          </div>
-          <div>
-            <img src={lobo3} alt=""></img>
-            <p>Legenda</p>
-          </div>
+          <Imagem img={lobo2} legenda="Legenda 1"></Imagem>
+          <Imagem img={lobo3} legenda="Legenda 2"></Imagem>
+          <Imagem img={lobo1} legenda="Legenda 3"></Imagem>
+          <Imagem img={lobo3} legenda="Legenda 4"></Imagem>
         </div>
       </section>
     </div>
@@ -143,20 +104,11 @@ const SectionGrid2 = props => {
 const SectionGrid3 = props => {
   return (
     <div>
-      <h1>Section Grid 3</h1>
+      <Titulo conteudo="Section Grid 3"></Titulo>
       <section class="grid3">
-        <div class="grid3-item">
-          <img src={lobo4} alt=""></img>
-          <p>Legenda</p>
-        </div>
-        <div class="grid3-item">
-          <img src={lobo1} alt=""></img>
-          <p>Legenda</p>
-        </div>
-        <div class="grid3-item">
-          <img src={lobo2} alt=""></img>
-          <p>Legenda</p>
-        </div>
+        <Imagem img={lobo4} legenda="Legenda 1" classe="grid3-item"></Imagem>
+        <Imagem img={lobo1} legenda="Legenda 2" classe="grid3-item"></Imagem>
+        <Imagem img={lobo2} legenda="Legenda 3" classe="grid3-item"></Imagem>
       </section>
     </div>
   );
@@ -175,52 +127,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-// return (
-//   <div className="App">
-//     <header className="App-header">
-//       <img src={logo} className="App-logo" alt="logo" />
-//       <p>
-//         Edit <code>src/App.js</code> and save to reload.
-//       </p>
-//       <a
-//         className="App-link"
-//         href="https://reactjs.org"
-//         target="_blank"
-//         rel="noopener noreferrer"
-//       >
-//         Learn React
-//       </a>
-//     </header>
-//   </div>
-// );
-
-
-/* <div>
-<img src="https://conteudo.imguol.com.br/c/entretenimento/f2/2018/06/08/dinho-bento-hinoto-julio-rasec-samuel-reoli-e-sergio-reoli-formaram-o-grupo-mamonas-assassinas-1528495357560_v2_450x450.jpg" alt=""></img>
-<p>foto 1</p>
-</div>
-<div>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSRMpz4llL1OxKn6Gt10Kf5PQnUFsyuJPA0RbMGzV6YD0UtKFQ3&usqp=CAU" alt=""></img>
-<p>foto 2</p>
-</div>
-<div>
-<img src="https://cdn.mensagenscomamor.com/content/images/p000003111.jpg?v=0" alt=""></img>
-<p>foto 3</p>
-</div>
-<div>
-<img src="https://www.vagalume.com.br/mamonas-assassinas/images/mamonas-assassinas.jpg" alt=""></img>
-<p>foto 4</p>
-</div>
-<div>
-<img src="https://i.pinimg.com/originals/e1/34/57/e13457dcee6fda045022384e6b90942c.jpg" alt=""></img>
-<p>foto 5</p>
-</div>
-<div>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnycAmLvczUwVlHfeL7qTErMEhZLfCcVaHsIhGKaatW9Z07vp3&s" alt=""></img>
-<p>foto 6</p>
-</div> */
