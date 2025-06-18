@@ -12,7 +12,7 @@ import lobo4 from "./img/lobo4.jpg";
 const Header = (props) => {
   return (
     <header class="header">
-      <a href="/">
+      <Link to="/">
         <img
           className="logo"
           alt="logo"
@@ -20,17 +20,17 @@ const Header = (props) => {
           width="100"
           height="100"
         ></img>
-      </a>
+      </Link>
       <nav>
         <ul class="menu">
           <li style={{ color: "rgba(255, 255, 255, 1)" }}>
-            <a href="/">Sobre</a>
+            <Link to="/sobre">Sobre</Link>
           </li>
           <li>
-            <a href="/">Produtos</a>
+            <Link to="/produtos">Produtos</Link>
           </li>
           <li>
-            <a href="/">Contato</a>
+            <Link to="/contato">Contato</Link>
           </li>
         </ul>
       </nav>
