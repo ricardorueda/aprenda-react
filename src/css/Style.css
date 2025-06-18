@@ -114,6 +114,18 @@ img {
   color: #1d1e20;
 }
 
+/* Navigation Links */
+.menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
