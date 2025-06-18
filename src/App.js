@@ -162,15 +162,46 @@ const SectionGrid3 = (props) => {
   );
 };
 
-function App() {
+const Home = () => {
   return (
     <div>
-      <Header></Header>
       <SectionFlex></SectionFlex>
       <SectionGrid1></SectionGrid1>
       <SectionGrid2></SectionGrid2>
       <SectionGrid3></SectionGrid3>
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <Header></Header>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/sobre" component={Sobre} />
+          <Route
+            path="/produtos"
+            render={() => (
+              <div style={{ padding: "40px", textAlign: "center" }}>
+                <h1>Produtos</h1>
+                <p>Página em construção...</p>
+              </div>
+            )}
+          />
+          <Route
+            path="/contato"
+            render={() => (
+              <div style={{ padding: "40px", textAlign: "center" }}>
+                <h1>Contato</h1>
+                <p>Página em construção...</p>
+              </div>
+            )}
+          />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
