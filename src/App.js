@@ -1,6 +1,8 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./css/Style.css";
 import logo from "./logo.svg";
+import Sobre from "./components/Sobre";
 
 import lobo1 from "./img/lobo1.jpg";
 import lobo2 from "./img/lobo2.jpg";
