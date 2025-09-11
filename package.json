@@ -12,7 +12,7 @@
     "tailwindcss": "^3.4.0"
   },
   "scripts": {
-    "tailwind:css": "tailwind build src/css/tailwind.src.css -c  tailwind.js -o src/css/tailwind.css",
+    "tailwind:css": "tailwindcss -i src/css/tailwind.src.css -o src/css/tailwind.css --watch",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
